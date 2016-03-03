@@ -1,0 +1,22 @@
+.footer {
+    margin: 0 auto;
+    text-align: center;
+    padding: 5%;
+}
+
+.header {
+    margin: 0 auto;
+    text-align: center;
+    padding: 5%;
+}
+
+.nav {
+    margin: 0 auto;
+    float: left;
+    padding-bottom: 5%;
+}
+
+button.favorites {
+    float: right;
+    margin-left: 10px
+}

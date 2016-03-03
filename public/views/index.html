@@ -2,13 +2,26 @@
 <html ng-app="myApp">
 <head>
     <title>Workflow Mongoose group challenge!</title>
-    <script type="text/javascript" src="/vendors/angular.min.js"></script>
-    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
-    <link rel="stylesheet" href="/vendors/normalize.css"/>
-    <link rel="stylesheet" href="/vendors/skeleton.css"/>
-    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="../vendors/angular.min.js"></script>
+    <script type="text/javascript" src="../vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="../scripts/app.js"></script>
+    <script type="text/javascript" src="../scripts/factories/blogFactory.js"></script>
+    <script type="text/javascript" src="../scripts/controllers/blogController.js"></script>
+    <script type="text/javascript" src="../scripts/controllers/reviewController.js"></script>
+    <link rel="stylesheet" href="../vendors/normalize.css"/>
+    <link rel="stylesheet" href="../vendors/skeleton.css"/>
 </head>
 <body>
+<div class="container">
+
+    <div class="section header">
+        <div class="row">
+            <header ng-include="'views/templates/nav.html'"></header>
+        </div>
+
+            <main ng-view></main>
+
+
 
 </body>
 </html>

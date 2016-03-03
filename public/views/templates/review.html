@@ -1,14 +1,20 @@
-<form>
-    <label for="title">Title</label>
-    <input type="text" ng-model="title" id="title" />
-    <label for="date">Date</label>
-    <input type="text" ng-model="date" id="date" />
-    <label for="author">Author</label>
-    <input type="text" ng-model="author" id="author" />
-    <label for="text">Text</label>
-    <input type="text" ng-model="text" id="text" />
-    <label for="comments">Reviewer Comments</label>
-    <input type="text" ng-model="comments" id="comments" />
-    <button ng-click="saveFunction()">Save</button>
-    <button ng-click="deleteFunction()">Delete</button>
-</form>
+<section id="blogList" ng-repeat="blog in blogs">
+    <div>
+        <span>{{blog.title}}<button ng-click="showPost($index)">Edit</button><button ng-click="deleteBlog(blog._id)">Delete</button></span>
+    </div>
+    <div ng-show="blog.showThis" ng-init="blog.showThis = false">
+        <form>
+            <label for="title" >Title</label>
+            <input type="text" ng-model="blog.title" id="title" />
+            <label for="date">Date</label>
+            <input type="text" ng-model="blog.date" id="date" />
+            <label for="author">Author</label>
+            <input type="text" ng-model="blog.author" id="author" />
+            <label for="text">Text</label>
+            <input type="text" ng-model="blog.text" id="text" />
+            <label for="comment">Reviewer Comment</label>
+            <input type="text" ng-model="blog.comment" id="comment" />
+            <button ng-click="updateBlog(blog)">Update</button>
+        </form>
+    </div>
+</section>
